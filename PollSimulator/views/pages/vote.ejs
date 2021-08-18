@@ -8,19 +8,28 @@
             <%- include('../partials/header.ejs'); %>
         </header>
         <main>
+
+        <form method="POST" action="/vote">
+        <%if(list) {%> 
+            <%console.log(list)%>
+        <%}else{%>
+            <%console.log("Error")%>
+      <%}%>
         <h1>Vote</h1>
             <div>
                 <label>Student Id: </label>
                 <input name="studid" type="text"/>
             </div>
-        
+        <% for(var i in list) {%>
             <div>
-                <input name="candidates" type="radio" value="Deep Goyal">
-                <label>Deep Goyal</label>
+                <input name="cId" type="radio" value="<%=i%>">
+                <label><%= list[i].name %></label>
             </div>
+        <%}%>
             <div>
                 <button type="submit">Vote</button>
             </div>
+        </form>
         </main>
         <footer>
             <%- include('../partials/footer.ejs'); %>

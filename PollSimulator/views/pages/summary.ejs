@@ -9,12 +9,16 @@
         </header>
         <main>
             <h1>Voting Report</h1>
-            <div>
-                <label>Deep Goyal: 23</label>
-            </div>
-            <div>
-                <label>Sneha Mohan: 5</label>
-            </div>
+            <table >
+            <th>Candidates</th>
+            <th>Votes</th>
+          <% for(var i in list) {%>
+            <tr>
+                <td><%= list[i].name %></td>
+                <td><%= list[i].votes%></td>
+            </tr>
+        <%}%>
+        </table>
         </main>
         <footer>
             <%- include('../partials/footer.ejs'); %>

@@ -8,15 +8,19 @@
             <%- include('../partials/header.ejs'); %>
         </header>
         <main>
+        <%if(winner){%>
             <h1>Poll Result</h1>
             <div>
             <label>Won:</label>
-            <label>Deep Goyal(23)</label>
+            <label><%=winner.name%>(<%=winner.votes%>)</label>
             </div>
             <div>
-            <label>Lost:</label>
+            <!-- <label>Lost:</label>
             <label>Akshay Singh(18)</label>
-            </div>
+            </div> -->
+        <% } else{%>
+        <h1 style="color: red;">Election is yet to be started</h1>
+        <% } %>
         </main>
         <footer>
             <%- include('../partials/footer.ejs'); %>
