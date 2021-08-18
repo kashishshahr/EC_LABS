@@ -17,6 +17,7 @@ router.get('/result',function(req,res){
     var c=data.getWinner();
     console.log("winner:");
     console.log(c);
+    
     res.render('pages/result',{winner:c});
 });
 

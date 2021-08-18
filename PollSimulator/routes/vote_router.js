@@ -15,10 +15,14 @@ router.post('/',function(req,res){
     if(!data.AlreadyVoted(req.body.studid))
     {
         var list=data.voteCandidate(req.body.studid,req.body.cId);
+        console.log("Successs");
         res.redirect('/summary');
     }else{
+        console.log("Already registered");
+        // res.json({show:0});
         res.redirect("/summary");
     }
 });
 
 module.exports=router;
+
