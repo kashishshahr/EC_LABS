@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="end">
+    <head>
+        <%- include('../partials/head.ejs'); %> 
+    </head>
+    <body>
+        <header>
+            <%- include('../partials/header.ejs'); %>
+        </header>
+        <main>
+        <h1>Vote</h1>
+            <div>
+                <label>Student Id: </label>
+                <input name="studid" type="text"/>
+            </div>
+        
+            <div>
+                <input name="candidates" type="radio" value="Deep Goyal">
+                <label>Deep Goyal</label>
+            </div>
+            <div>
+                <button type="submit">Vote</button>
+            </div>
+        </main>
+        <footer>
+            <%- include('../partials/footer.ejs'); %>
+        </footer>
+    </body>
+</html>
