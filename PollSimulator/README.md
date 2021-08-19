@@ -2,7 +2,7 @@
 Poll Simulator
 IT618 Enterprise Computing
 202012039
-
+https://aqueous-beyond-10006.herokuapp.com/result
 Nodejs, EJS
 
 Main Goal: 3 tire architecture.
